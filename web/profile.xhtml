@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+        <!-- Titles are displayed dynamically depending on file name. -->
+        <title>Customer Profile | Norton Finance</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/main-css.css" type="text/css"/>
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+    </h:head>
+    <h:body>
+        <!--Top Menu Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <div class="navbar-header">
+                    <a href="index.xhtml">
+                        <img alt="Norton Finance" class="navbar-brand img-circle" src="images/norton_finance_logo.jpg"/>
+                    </a>
+                    <a class="navbar-brand" href="index.xhtml">Norton Finance</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Menu items -->
+                <div class="collapse navbar-collapse" id="mainNavBar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="index.xhtml"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+
+                        <!-- Dropdown menu item -->
+                        <li class="dropdown" >
+                            <a href="#" class="dropodown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;Loans <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="home-loan.xhtml">Home Loan</a></li>
+                                <li ><a href="personal-loan.xhtml">Personal Loan</a></li>
+                                <li ><a href="vehicle-loan.xhtml">Vehicle Loan</a></li>
+                                <li ><a href="business-loan.xhtml">Business Loan</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li ><a href="customerLoanDetails.xhtml"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Loan Details</a></li>
+                        <li ><a href="emiDetails.xhtml"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;EMI Details</a></li>
+                        
+                        <li ><a href="about-us.xhtml"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;About Us</a></li>
+                        <li ><a href="contact-us.xhtml"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;Contact Us</a></li>
+                    </ul>
+                    <!-- Menu items on right side -->
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav><br/><br/>
+        <div class="container-fluid Banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <br/>
+                        <font>
+                        <h1 style="color: white; ">Profile <small>Norton Finance</small></h1>
+                        <br/><br/>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <!-- Left Menu Bar -->
+                <!-- col-md-4 -->
+                <div class="col-md-3">
+            
+            
+            
+            <div class="list-group">
+                <a href="#" class="list-group-item active main-color">&nbsp;&nbsp;Loans</a>
+                <a href="home-loan.xhtml" class="list-group-item">&nbsp;&nbsp;Home Loan</a>
+                <a href="personal-loan.xhtml" class="list-group-item">&nbsp;&nbsp;Personal Loan</a>
+                <a href="vehicle-loan.xhtml" class="list-group-item">&nbsp;&nbsp;Vehicle Loan</a>
+                <a href="business-loan.xhtml" class="list-group-item">&nbsp;&nbsp;Business Loan</a>
+            </div>
+            
+            <div class="list-group">
+                <a href="#" class="list-group-item active main-color">&nbsp;&nbsp;General</a>
+                <a href="downloads/LoanApplicationForm.pdf" class="list-group-item">&nbsp;&nbsp;Download Loan Form</a>
+                <a href="loanApplication.xhtml" class="list-group-item">&nbsp;&nbsp;Apply Online</a>
+            </div>
+            
+        </div>
+
+                <div class="col-md-8">
+                    <div class="well">
+                        
+                        <center><h1><small>Profile</small></h1></center>
+                        <br/>
+                        <form class="form-horizontal" method="POST" action="UpdateProfile">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" value="${beanCtrl.loan.name}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_id" class="col-sm-2 control-label">Email Id</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="email_id" value="${beanCtrl.customer.email}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pan_no" class="col-sm-2 control-label">PAN No.</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="pan_no" value="${beanCtrl.customer.pan_no}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adhar_no" class="col-sm-2 control-label">Adhar Card No.</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="adhar_no" value="${beanCtrl.customer.adhar_card_no}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="col-sm-2 control-label">DOB</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="dob" value="${beanCtrl.customer.dob}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" name="password" value="${beanCtrl.customer.password}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile_no" class="col-sm-2 control-label">Mobile No.</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="mobile_no" name="mobile_no" value="${beanCtrl.customer.mobile_no}"/> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="col-sm-2 control-label">Address</label>
+                                <div class="col-sm-10">
+                                    <h:inputTextarea class="form-control" id="address" value="${beanCtrl.customer.address}" />
+                                    
+                                    <small>Submit to update details.</small>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-6">
+                                    <h:form>
+                                        <h:commandButton action="${beanCtrl.saveUser(customer)}" value="Update" />
+                                    </h:form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p style="font-family: verdana; font-size: 12pt;">Norton Finance&reg; <br/>All Right Reserved &copy;2018 </p>
+                    </div>
+                    <div class="col-md-4">
+                        Follows us on:&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/nortonfinanceuk/" target="_blank"> <img class="img img-rounded" src="images/facebook.png"/></a>&nbsp;&nbsp;&nbsp;<a href="https://in.linkedin.com/company/norton-finance" target="_blank"><img class='img-rounded' src="images/linkedIn.png"/></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/nortonfinance?lang=en" target="_blank"><img class='img-rounded' src="images/twitter.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+    </h:body>
+</html>
+

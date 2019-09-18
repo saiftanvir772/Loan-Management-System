@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./newTemplate.xhtml">
+            <ui:define name="content">
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-md-8">
+                            <div class="well">
+
+
+                                
+                                
+                                <h3>EMI Details</h3>
+                                <p:dataTable var="emi" value="">
+                                    <p:column headerText="Loan Amount">
+                                        <h:outputText value="" />
+                                    </p:column>
+
+                                    <p:column headerText="Tenure">
+                                        <h:outputText value="" />
+                                    </p:column>
+
+                                    <p:column headerText="Interest Rate">
+                                        <h:outputText value="" />
+                                    </p:column>
+                                    <p:column headerText="Interest Amount">
+                                        <h:outputText value="" />
+                                    </p:column>
+                                    <p:column headerText="Total Amount">
+                                        <h:outputText value="" />
+                                    </p:column>
+                                    <p:column headerText="EMI Amount">
+                                        <h:outputText value="" />
+                                    </p:column>
+                                </p:dataTable>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>>
+        </ui:composition>
+    </body>
+</html>
+

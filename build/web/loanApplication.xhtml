@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./newTemplate.xhtml">
+            <ui:define name="content">
+                <center>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h:form>    
+                                    <h4>Applicant's Name</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Applicant's Name" />
+                                    </span>
+                                    <h4>Loan Type</h4>
+                                    <p:messages>
+                                        <p:autoUpdate />
+                                    </p:messages>
+                                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                                        <p:outputLabel for="type" value="Loan Type" />
+                                        <p:selectOneMenu id="type" value="" style="width:125px">
+                                            <f:selectItem itemLabel="Select One" itemValue="" />
+                                            <f:selectItem itemLabel="Home Loan" itemValue="Home Loan" />
+                                            <f:selectItem itemLabel="Personal Loan" itemValue="Personal Loan" />
+                                            <f:selectItem itemLabel="Business Loan" itemValue="Business Loan" />
+                                            <f:selectItem itemLabel="Vehicle Loan" itemValue="Vehicle Loan" />
+                                        </p:selectOneMenu>
+                                    </h:panelGrid>
+                                    <h4>Amount</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Loan Amount" />
+                                    </span>
+                                    <h4>Tenure</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Tenure" />
+                                    </span>
+                                    <h4>Address</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Address" />
+                                    </span>
+                                    <h4>Mobile No.</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Mobile No." />
+                                    </span>
+                                    <h4>Email</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Email" />
+                                    </span>
+                                    <h4>Guarantor's Name</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Guarantor's Name" />
+                                    </span>
+                                    <h4>Guarantor's Address</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Guarantor's Address" />
+                                    </span>
+                                    <h4>Guarantor's Mobile No.</h4>
+                                    <span class="ui-float-label">
+                                        <p:inputText id="float-input" value="" />
+                                        <p:outputLabel for="@previous" value="Guarantor's Mobile No." />
+                                    </span>
+                                </h:form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </center>
+
+            </ui:define>>
+        </ui:composition>
+    </body>
+</html>
+
